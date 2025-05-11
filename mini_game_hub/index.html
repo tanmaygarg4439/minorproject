@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Game Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <h1>🎮 Mini Game Hub</h1>
+  <div class="hub-container">
+    <div class="game-card" onclick="showGame('ticTacToe')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Tic_tac_toe.svg" alt="Tic Tac Toe" />
+      <div class="game-title">Tic Tac Toe</div>
+    </div>
+    <div class="game-card" onclick="showGame('numberGuess')">
+      <img src="number.png" alt="Guess the Number" />
+      <div class="game-title">Guess the Number</div>
+    </div>
+    <div class="game-card" onclick="showGame('rockPaper')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Rock-paper-scissors.svg" alt="Rock Paper Scissors" />
+      <div class="game-title">Rock Paper Scissors</div>
+    </div>
+  </div>
+
+  <div id="ticTacToe" class="game">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+    <h2>Tic Tac Toe</h2>
+    <table id="board"></table>
+    <p id="ttt-status"></p>
+    <button onclick="resetTicTacToe()">Restart</button>
+  </div>
+
+  <div id="numberGuess" class="game">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+    <h2>Guess the Number</h2>
+    <input type="number" id="guessInput" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="guessResult"></p>
+    <button onclick="startGuessGame()">Reset</button>
+  </div>
+
+  <div id="rockPaper" class="game">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+    <h2>Rock Paper Scissors</h2>
+    <button onclick="playRPS('rock')">🪨 Rock</button>
+    <button onclick="playRPS('paper')">📄 Paper</button>
+    <button onclick="playRPS('scissors')">✂️ Scissors</button>
+    <p id="rpsResult"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
